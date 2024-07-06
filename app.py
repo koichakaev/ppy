@@ -60,11 +60,11 @@ def get_vacancies(keyword, experience, employment):
                 output.put_text(f"🆔ID: {vacancy_id}")
                 output.put_text(f"✍️Title: {vacancy_title}")
                 output.put_text(f"🏦Company: {company_name}")
-                output.put_text(f"🖥URL: {vacancy_url}")
+                output.put_html(f'<a href="{vacancy_url}">🖥URL: {vacancy_url}</a>')
                 output.put_text("")  # Add an empty line for separation
 
                 if i < num_vacancies - 1:
-                    output.put_text("✨✨✨✨✨")  # Add separation line
+                    output.put_text("                                                                                        ")  # Add separation line
         else:
             output.put_text("No vacancies found.")
     else:
